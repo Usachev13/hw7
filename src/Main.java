@@ -21,5 +21,20 @@ public class Main {
             System.out.print(num2 + " ");
             num2--;
         }
+        System.out.println();
+
+        /* task3 */
+        int countryY = 12_000_000;
+        int toBeBorn = countryY / 1000 * 17;
+        int toBeDie = countryY / 1000 * 8;
+        int year = 1;
+        while (year <= 10){
+            countryY = countryY + toBeBorn - toBeDie;
+            toBeBorn = countryY / 1000 * 17;
+            toBeDie = countryY / 1000 * 8;
+            System.out.println("Год " + year + " численность населения составляет " + countryY);
+            year++;
+        }
+
     }
 }
