@@ -59,5 +59,16 @@ public class Main {
             }
             Month++;
         }
+
+        /* task7 */
+
+        int daysPerMonth = 31;
+        for (int friday = 5; friday < daysPerMonth; friday += 7) {
+            for (int i = 1; i < daysPerMonth; i++) {
+                if (i == friday) {
+                    System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
+                }
+            }
+        }
     }
 }
