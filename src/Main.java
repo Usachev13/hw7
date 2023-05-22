@@ -3,21 +3,21 @@ public class Main {
         /* task1 */
         int total = 0;
         int month = 0;
-        while (total < 2_459_000){
+        while (total < 2_459_000) {
             total += 15_000;
             month += 1;
-            System.out.println("Месяц " + month +", сумма накоплений равна " + total + " рублей");
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
 
         /* task2 */
         int num = 1;
-        while (num <= 10){
+        while (num <= 10) {
             System.out.print(num + " ");
             num++;
         }
         System.out.println();
         int num2 = 10;
-        while (num2 >= 1){
+        while (num2 >= 1) {
             System.out.print(num2 + " ");
             num2--;
         }
@@ -28,7 +28,7 @@ public class Main {
         int toBeBorn = countryY / 1000 * 17;
         int toBeDie = countryY / 1000 * 8;
         int year = 1;
-        while (year <= 10){
+        while (year <= 10) {
             countryY = countryY + toBeBorn - toBeDie;
             toBeBorn = countryY / 1000 * 17;
             toBeDie = countryY / 1000 * 8;
@@ -40,13 +40,14 @@ public class Main {
         int deposit = 15000;
         int percent = deposit / 100 * 7;
         int Month = 1;
-        while (deposit <= 12_000_000){
+        while (deposit <= 12_000_000) {
             deposit = deposit + percent;
             percent = deposit / 100 * 7;
-            System.out.println("Месяц " + Month + ", накопления составляют " + deposit);
+            if (Month % 6 == 0) {
+                System.out.println("Месяц " + Month + ", накопления составляют " + deposit);
+            }
             Month++;
+
         }
-
-
     }
 }
