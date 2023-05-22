@@ -70,5 +70,17 @@ public class Main {
                 }
             }
         }
+
+        /* task8 */
+        int cometYear;
+        int startsYear;
+        int lastYear = 2123;
+        for (cometYear = 0; cometYear <= lastYear; cometYear += 79){
+            for (startsYear = 1823; startsYear <= lastYear; startsYear++){
+                if (startsYear == cometYear){
+                    System.out.println(cometYear);
+                }
+            }
+        }
     }
 }
