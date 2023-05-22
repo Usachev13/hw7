@@ -5,7 +5,7 @@ public class Main {
         int month = 0;
         while (total < 2_459_000) {
             total += 15_000;
-            month += 1;
+            month++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
 
@@ -48,6 +48,16 @@ public class Main {
             }
             Month++;
 
+        }
+
+        /* task6 */
+        while (Month <= 108){
+            deposit = deposit + percent;
+            percent = deposit / 100 * 7;
+            if (Month % 6 == 0) {
+                System.out.println("Месяц " + Month + ", накопления составляют " + deposit);
+            }
+            Month++;
         }
     }
 }
