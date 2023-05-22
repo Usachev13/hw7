@@ -36,5 +36,17 @@ public class Main {
             year++;
         }
 
+        /* task4 */
+        int deposit = 15000;
+        int percent = deposit / 100 * 7;
+        int Month = 1;
+        while (deposit <= 12_000_000){
+            deposit = deposit + percent;
+            percent = deposit / 100 * 7;
+            System.out.println("Месяц " + Month + ", накопления составляют " + deposit);
+            Month++;
+        }
+
+
     }
 }
