@@ -25,24 +25,23 @@ public class Main {
 
         /* task3 */
         int countryY = 12_000_000;
-        int toBeBorn = countryY / 1000 * 17;
-        int toBeDie = countryY / 1000 * 8;
+        int birthRate = 17;
+        int mortality = 8;
         int year = 1;
         while (year <= 10) {
-            countryY = countryY + toBeBorn - toBeDie;
-            toBeBorn = countryY / 1000 * 17;
-            toBeDie = countryY / 1000 * 8;
+            countryY = countryY + countryY * birthRate / 1000 - countryY * mortality / 1000;
             System.out.println("Год " + year + " численность населения составляет " + countryY);
             year++;
         }
 
         /* task4 */
         int deposit = 15000;
-        int percent = deposit / 100 * 7;
+        int rate = 7;
         int Month = 1;
-        while (deposit <= 12_000_000) {
+        int sum = 12_000_000;
+        while (deposit <= sum) {
+            int percent = deposit / 100 * rate;
             deposit = deposit + percent;
-            percent = deposit / 100 * 7;
             if (Month % 6 == 0) {
                 System.out.println("Месяц " + Month + ", накопления составляют " + deposit);
             }
@@ -51,9 +50,9 @@ public class Main {
         }
 
         /* task6 */
-        while (Month <= 108){
+        while (Month <= 108) {
+            int percent = deposit / 100 * rate;
             deposit = deposit + percent;
-            percent = deposit / 100 * 7;
             if (Month % 6 == 0) {
                 System.out.println("Месяц " + Month + ", накопления составляют " + deposit);
             }
@@ -64,22 +63,16 @@ public class Main {
 
         int daysPerMonth = 31;
         for (int friday = 5; friday < daysPerMonth; friday += 7) {
-            for (int i = 1; i < daysPerMonth; i++) {
-                if (i == friday) {
-                    System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
-                }
-            }
+            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
         }
 
         /* task8 */
-        int cometYear;
-        int startsYear;
-        int lastYear = 2123;
-        for (cometYear = 0; cometYear <= lastYear; cometYear += 79){
-            for (startsYear = 1823; startsYear <= lastYear; startsYear++){
-                if (startsYear == cometYear){
-                    System.out.println(cometYear);
-                }
+        int currentYear = 2023;
+        int startsYear = currentYear - 200;
+        int lastYear = currentYear + 100;
+        for (int cometYear = 0; cometYear <= lastYear; cometYear += 79) {
+            if (cometYear >= startsYear) {
+                System.out.println(cometYear);
             }
         }
     }
