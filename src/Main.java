@@ -2,9 +2,11 @@ public class Main {
     public static void main(String[] args) {
         /* task1 */
         int total = 0;
-        int month = 0;
-        while (total < 2_459_000) {
-            total += 15_000;
+        int target = 2_459_000;
+        int deposit = 15_000;
+        while (total < target) {
+            int month = 0;
+            total += deposit;
             month++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
@@ -28,41 +30,44 @@ public class Main {
         int birthRate = 17;
         int mortality = 8;
         int year = 1;
-        while (year <= 10) {
+        int time = 10;
+        while (year <= time) {
             countryY = countryY + countryY * birthRate / 1000 - countryY * mortality / 1000;
             System.out.println("Год " + year + " численность населения составляет " + countryY);
             year++;
         }
 
         /* task4 */
-        int deposit = 15000;
+        int contribution = 15000;
         int rate = 7;
-        int Month = 1;
         int sum = 12_000_000;
-        while (deposit <= sum) {
-            int percent = deposit / 100 * rate;
-            deposit = deposit + percent;
-            if (Month % 6 == 0) {
-                System.out.println("Месяц " + Month + ", накопления составляют " + deposit);
+        int month = 1;
+        while (contribution <= sum) {
+            int percent = contribution / 100 * rate;
+            contribution = contribution + percent;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + ", накопления составляют " + deposit);
             }
-            Month++;
+            month++;
 
         }
 
         /* task6 */
-        while (Month <= 108) {
+        int term = 108;
+        while (month <= term) {
             int percent = deposit / 100 * rate;
             deposit = deposit + percent;
-            if (Month % 6 == 0) {
-                System.out.println("Месяц " + Month + ", накопления составляют " + deposit);
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + ", накопления составляют " + deposit);
             }
-            Month++;
+            month++;
         }
 
         /* task7 */
 
         int daysPerMonth = 31;
-        for (int friday = 5; friday < daysPerMonth; friday += 7) {
+        int dayFriday = 5;
+        for (int friday = dayFriday; friday < daysPerMonth; friday += 7) {
             System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
         }
 
@@ -70,7 +75,8 @@ public class Main {
         int currentYear = 2023;
         int startsYear = currentYear - 200;
         int lastYear = currentYear + 100;
-        for (int cometYear = 0; cometYear <= lastYear; cometYear += 79) {
+        int cometPerTime = 79;
+        for (int cometYear = 0; cometYear <= lastYear; cometYear += cometPerTime) {
             if (cometYear >= startsYear) {
                 System.out.println(cometYear);
             }
