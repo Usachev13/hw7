@@ -41,26 +41,27 @@ public class Main {
         int contribution = 15000;
         int rate = 7;
         int sum = 12_000_000;
-        int month = 1;
+        int monthForTask4 = 1;
         while (contribution <= sum) {
             int percent = contribution / 100 * rate;
             contribution = contribution + percent;
-            if (month % 6 == 0) {
-                System.out.println("Месяц " + month + ", накопления составляют " + deposit);
+            if (monthForTask4 % 6 == 0) {
+                System.out.println("Месяц " + monthForTask4 + ", накопления составляют " + deposit);
             }
-            month++;
+            monthForTask4++;
 
         }
 
         /* task6 */
         int term = 108;
-        while (month <= term) {
+        int monthForTask6 = 1;
+        while (monthForTask6 <= term) {
             int percent = deposit / 100 * rate;
             deposit = deposit + percent;
-            if (month % 6 == 0) {
-                System.out.println("Месяц " + month + ", накопления составляют " + deposit);
+            if (monthForTask6 % 6 == 0) {
+                System.out.println("Месяц " + monthForTask6 + ", накопления составляют " + deposit);
             }
-            month++;
+            monthForTask6++;
         }
 
         /* task7 */
